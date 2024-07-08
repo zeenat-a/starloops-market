@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/starloops-market">
             <div className="App">
                 <Header />
                 <Routes>
