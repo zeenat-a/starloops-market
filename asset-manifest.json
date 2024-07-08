@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/starloops-market/static/css/main.4084e93f.css",
-    "main.js": "/starloops-market/static/js/main.9bb04f8a.js",
+    "main.js": "/starloops-market/static/js/main.a32c0e61.js",
     "static/js/453.9360e2cf.chunk.js": "/starloops-market/static/js/453.9360e2cf.chunk.js",
     "index.html": "/starloops-market/index.html",
     "main.4084e93f.css.map": "/starloops-market/static/css/main.4084e93f.css.map",
-    "main.9bb04f8a.js.map": "/starloops-market/static/js/main.9bb04f8a.js.map",
+    "main.a32c0e61.js.map": "/starloops-market/static/js/main.a32c0e61.js.map",
     "453.9360e2cf.chunk.js.map": "/starloops-market/static/js/453.9360e2cf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4084e93f.css",
-    "static/js/main.9bb04f8a.js"
+    "static/js/main.a32c0e61.js"
   ]
 }
