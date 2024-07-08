@@ -3,9 +3,9 @@ import './FeaturedProducts.css';
 
 const FeaturedProducts = () => {
     const products = [
-        { id: 1, name: 'Snoopy Themed Bag', img: '/snoopybag.webp' },
-        { id: 2, name: 'Wrist Warmers', img: '/wristwarmers.webp' },
-        { id: 3, name: 'Starfish Tote Bag', img: '/starfishbag.webp' },
+        { id: 1, name: 'Snoopy Themed Bag', img: process.env.PUBLIC_URL + '/snoopybag.webp' },
+        { id: 2, name: 'Wrist Warmers', img: process.env.PUBLIC_URL + '/wristwarmers.webp' },
+        { id: 3, name: 'Starfish Tote Bag', img: process.env.PUBLIC_URL + '/starfishbag.webp' },
     ];
 
     return (

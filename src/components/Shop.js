@@ -6,48 +6,48 @@ const products = [
         id: 1,
         name: 'Starfish Tote Bag',
         price: '$30.00',
-        image: 'starfishbag.webp'
+        image: process.env.PUBLIC_URL + '/starfishbag.webp'
     },
     {
         id: 2,
         name: 'Tomato Tote Bag',
         price: '$30.00',
-        image: 'tomatobag.webp'
+        image: process.env.PUBLIC_URL + '/tomatobag.webp'
     },
     {
         id: 3,
         name: 'Wrist Warmers',
         price: '$20.00',
-        image: 'wristwarmers.webp'
+        image: process.env.PUBLIC_URL + '/wristwarmers.webp'
     },
     {
         id: 4,
         name: 'Blueberry Bucket Hat',
         price: '$25.00',
-        image: 'blueberry.webp'
+        image: process.env.PUBLIC_URL + '/blueberry.webp'
     },
     {
         id: 5,
         name: 'Ruffled Bag',
         price: '$40.00',
-        image: 'rufflebag.webp'
+        image: process.env.PUBLIC_URL + '/rufflebag.webp'
     },
     {
         id: 6,
         name: 'Pudding Plush',
         price: '$15.00',
-        image: 'pudding.webp'
+        image: process.env.PUBLIC_URL + '/pudding.webp'
     },
     {
         id: 7,
         name: 'Coaster Set',
         price: '$15.00',
-        image: 'coasters.webp'
+        image: process.env.PUBLIC_URL + '/coasters.webp'
     },
     {
         id: 8,
         name: 'Custom Order',
-        image: 'custom-order.jpg'
+        image: process.env.PUBLIC_URL + '/custom-order.jpg'
     }
 ];
 

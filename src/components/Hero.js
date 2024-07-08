@@ -11,7 +11,7 @@ const Hero = () => {
 
     return (
         <section className="hero">
-            <img src="/home.jpg" alt="Star Loops Market" />
+            <img src={`${process.env.PUBLIC_URL}/home.jpg`} alt="Star Loops Market" />
             <div className="hero-text">
                 <h1>Star Loops Market</h1>
                 <button onClick={handleShopAllClick}>Shop All</button>

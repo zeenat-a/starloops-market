@@ -42,7 +42,7 @@ const Cart = () => {
                     </div>
                 </div>
                 <div className="cart-item">
-                    <img src="blueberry.webp" alt="Blueberry Bucket Hat" />
+                    <img src={`${process.env.PUBLIC_URL}/blueberry.webp`} alt="Blueberry Bucket Hat" />
                     <div className="item-details">
                         <h2>Blueberry Bucket Hat</h2>
                         <p>$25.00</p>
