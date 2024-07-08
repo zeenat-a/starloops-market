@@ -11,13 +11,13 @@ const products = [
     {
         id: 2,
         name: 'Tomato Tote Bag',
-        price: '$20.00',
+        price: '$30.00',
         image: 'tomatobag.webp'
     },
     {
         id: 3,
         name: 'Wrist Warmers',
-        price: '$15.00',
+        price: '$20.00',
         image: 'wristwarmers.webp'
     },
     {
@@ -35,14 +35,19 @@ const products = [
     {
         id: 6,
         name: 'Pudding Plush',
-        price: '$10.00',
+        price: '$15.00',
         image: 'pudding.webp'
     },
     {
         id: 7,
         name: 'Coaster Set',
-        price: '$10.00',
+        price: '$15.00',
         image: 'coasters.webp'
+    },
+    {
+        id: 8,
+        name: 'Custom Order',
+        image: 'custom-order.jpg'
     }
 ];
 
@@ -59,12 +64,13 @@ const Shop = () => {
                 </ul>
                 <h2>Price Range</h2>
                 <ul>
-                    <li>$15 - $30</li>
-                    <li>$30 - $50</li>
+                    <li><input type="checkbox" id="15-30" name="price-range" value="$15 - $30" /> <label htmlFor="15-30">$15 - $30</label></li>
+                    <li><input type="checkbox" id="30-50" name="price-range" value="$30 - $50" /> <label htmlFor="30-50">$30 - $50</label></li>
+                    <li><input type="checkbox" id="15-30" name="price-range" value="$50+" /> <label htmlFor="50+">$50+</label></li>
                 </ul>
                 <h2>Availability</h2>
                 <ul>
-                    <li>In Stock</li>
+                    <li><input type="checkbox" id="in-stock" name="availability" value="In Stock" /> <label htmlFor="in-stock">In Stock</label></li>
                 </ul>
             </aside>
             <main className="shop-main">
@@ -87,6 +93,7 @@ const Shop = () => {
                             <p>{product.price}</p>
                         </div>
                     ))}
+
                 </div>
             </main>
         </div>

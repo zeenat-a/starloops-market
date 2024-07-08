@@ -5,11 +5,10 @@ import Hero from './components/Hero';
 import FeaturedProducts from './components/FeaturedProducts';
 import About from './components/About';
 import Footer from './components/Footer';
-import Shop from './components/Shop';
 import FAQ from './components/FAQ';
 import Cart from './components/Cart';
-import './App.css';
-
+import Shop from './components/Shop'; 
+import './App.css'; 
 
 function App() {
     return (
@@ -18,13 +17,15 @@ function App() {
                 <Header />
                 <Routes>
                     <Route path="/" element={<React.Fragment>
-                        <Hero />
-                        <FeaturedProducts />
-                        <About />
+                            <Hero />
+                            <FeaturedProducts />
+                            <About />
                     </React.Fragment>} />
-                    <Route path="/shop" element={<Shop />} />
+                    <Route path="/" element={<Hero />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/faq" element={<FAQ />} />
                     <Route path="/cart" element={<Cart />} />
+                    <Route path="/shop" element={<Shop />} /> {/* Define the route for Shop component */}
                 </Routes>
                 <Footer />
             </div>

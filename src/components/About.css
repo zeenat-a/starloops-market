@@ -1,5 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -45,13 +44,6 @@ body {
     border-radius: 10px;
 }
 
-footer p {
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #333;
+.slogan {
+    font-weight: bold;
 }

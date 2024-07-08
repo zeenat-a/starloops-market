@@ -8,26 +8,15 @@ const Footer = () => {
                 <p>STAR LOOPS MARKET</p>
                 <nav>
                     <ul>
-                        <li>Topic</li>
-                        <li>Topic</li>
-                        <li>Topic</li>
+                        <li>Contact Us</li>
                     </ul>
                     <ul>
-                        <li>Page</li>
-                        <li>Page</li>
-                        <li>Page</li>
+                        <li> Shipping & Returns </li>
                     </ul>
                     <ul>
-                        <li>Page</li>
-                        <li>Page</li>
-                        <li>Page</li>
+                        <li> Terms & Conditions </li>
                     </ul>
                 </nav>
-                <div className="social-media">
-                    <a href="#"><i className="fa fa-facebook"></i></a>
-                    <a href="#"><i className="fa fa-instagram"></i></a>
-                    <a href="#"><i className="fa fa-twitter"></i></a>
-                </div>
             </div>
         </footer>
     );

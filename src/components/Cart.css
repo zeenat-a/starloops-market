@@ -1,6 +1,4 @@
-/* General styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -48,13 +46,20 @@ nav ul li a:hover {
 .cart-main {
     flex: 1;
     padding: 40px 20px;
-    background-color: #F9F9F9;
+    background-color: #f8f8f8;
     text-align: center;
 }
 
 .cart-main h1 {
     font-size: 2rem;
     margin-bottom: 20px;
+}
+
+
+.cart-timer {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: rgb(106, 0, 0); /* Change color as needed */
 }
 
 .cart-steps {
