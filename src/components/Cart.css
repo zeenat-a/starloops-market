@@ -55,7 +55,6 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-
 .cart-timer {
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -83,7 +82,7 @@ nav ul li a:hover {
     width: 50px;
 }
 
-.completed {
+.active {
     background-color: #333;
 }
 
@@ -174,4 +173,28 @@ footer {
 
 .footer-section ul li a:hover {
     text-decoration: underline;
+}
+
+/* Input styles for steps */
+.details input, .payment input {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    margin: 20px 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
 }

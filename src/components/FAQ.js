@@ -8,6 +8,7 @@ const FAQ = () => {
         email: '',
         question: ''
     });
+    const [language, setLanguage] = useState('en');
 
     const toggle = (index) => {
         if (open === index) {
@@ -29,31 +30,67 @@ const FAQ = () => {
         setForm({ name: '', email: '', question: '' });
     };
 
+    const toggleLanguage = () => {
+        setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'fr' : 'en'));
+    };
+
+    const faqData = {
+        en: [
+            { question: 'Do you ship internationally?', answer: 'Yes, we ship worldwide.' },
+            { question: 'Do you accept returns?', answer: 'Yes, returns are accepted within 30 days.' },
+            { question: 'How do I place a custom order?', answer: 'Contact us with your requirements.' },
+            { question: 'How can I track my order?', answer: 'You will receive a tracking link via email.' },
+        ],
+        fr: [
+            { question: 'Expédiez-vous à l\'international?', answer: 'Oui, nous expédions dans le monde entier.' },
+            { question: 'Acceptez-vous les retours?', answer: 'Oui, les retours sont acceptés dans les 30 jours.' },
+            { question: 'Comment passer une commande personnalisée?', answer: 'Contactez-nous avec vos exigences.' },
+            { question: 'Comment puis-je suivre ma commande?', answer: 'Vous recevrez un lien de suivi par email.' },
+        ]
+    };
+
+    const formLabels = {
+        en: {
+            name: 'Name:',
+            email: 'Email:',
+            question: 'Question(s):',
+            submit: 'Submit',
+            feedback: 'Have more questions? Ask us!',
+            faq: 'FAQ'
+        },
+        fr: {
+            name: 'Nom:',
+            email: 'E-mail:',
+            question: 'Question(s):',
+            submit: 'Soumettre',
+            feedback: 'Vous avez plus de questions? Demandez-nous!',
+            faq: 'FAQ'
+        }
+    };
+
+    const currentFaq = faqData[language];
+    const currentLabels = formLabels[language];
+
     return (
         <div className="faq-container">
             <main className="faq-main">
-                <h1>FAQ</h1>
-                <div className="faq-item" onClick={() => toggle(0)}>
-                    <h2>Do you ship internationally? <span className="faq-icon">{open === 0 ? <i className="fas fa-minus"></i> : <i className="fas fa-plus"></i>}</span></h2>
-                    {open === 0 && <p>Yes, we ship worldwide.</p>}
+                <div className="faq-header">
+                    <h1>{currentLabels.faq}</h1>
+                    <button onClick={toggleLanguage} className="language-toggle">
+                        {language === 'en' ? 'Français' : 'English'}
+                    </button>
                 </div>
-                <div className="faq-item" onClick={() => toggle(1)}>
-                    <h2>Do you accept returns? <span className="faq-icon">{open === 1 ? <i className="fas fa-minus"></i> : <i className="fas fa-plus"></i>}</span></h2>
-                    {open === 1 && <p>Yes, returns are accepted within 30 days.</p>}
-                </div>
-                <div className="faq-item" onClick={() => toggle(2)}>
-                    <h2>How do I place a custom order? <span className="faq-icon">{open === 2 ? <i className="fas fa-minus"></i> : <i className="fas fa-plus"></i>}</span></h2>
-                    {open === 2 && <p>Contact us with your requirements.</p>}
-                </div>
-                <div className="faq-item" onClick={() => toggle(3)}>
-                    <h2>How can I track my order? <span className="faq-icon">{open === 3 ? <i className="fas fa-minus"></i> : <i className="fas fa-plus"></i>}</span></h2>
-                    {open === 3 && <p>You will receive a tracking link via email.</p>}
-                </div>
+                {currentFaq.map((item, index) => (
+                    <div key={index} className="faq-item" onClick={() => toggle(index)}>
+                        <h2>{item.question} <span className="faq-icon">{open === index ? <i className="fas fa-minus"></i> : <i className="fas fa-plus"></i>}</span></h2>
+                        {open === index && <p>{item.answer}</p>}
+                    </div>
+                ))}
                 <div className="feedback-form">
-                    <h2>Have more questions? Ask us!</h2>
+                    <h2>{currentLabels.feedback}</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="name">Name:</label>
+                            <label htmlFor="name">{currentLabels.name}</label>
                             <input
                                 type="text"
                                 id="name"
@@ -64,7 +101,7 @@ const FAQ = () => {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">Email:</label>
+                            <label htmlFor="email">{currentLabels.email}</label>
                             <input
                                 type="email"
                                 id="email"
@@ -75,7 +112,7 @@ const FAQ = () => {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="question">Question(s):</label>
+                            <label htmlFor="question">{currentLabels.question}</label>
                             <textarea
                                 id="question"
                                 name="question"
@@ -84,7 +121,7 @@ const FAQ = () => {
                                 required
                             ></textarea>
                         </div>
-                        <button type="submit">Submit</button>
+                        <button type="submit">{currentLabels.submit}</button>
                     </form>
                 </div>
             </main>
